@@ -1,0 +1,144 @@
+<article ng-controller="sanPhamController">
+    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="margin-top: 20px;">
+        <div class="container">
+            <h2 style="text-align: center;">QUẢN LÝ SẢN PHẨM</h2>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+            Thêm sản phẩm
+        </button>
+        <br> <br>
+        <table class="table table-hover" style="border: 2px solid gray;">
+            <thead>
+                <tr>
+                    <div>
+                        <th>STT</th>
+                        <th>Tên SP</th>
+                        <th>Loại SP</th>
+                        <th>Giá bán</th>
+                        <th>Ảnh</th>
+                    </div>
+                    <div class="col-12">
+                        <th colspan="2">ACTION</th>
+                    </div>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="x in listMLB_coTrung">
+                    <td>{{$index+1}}</td>
+                    <td>{{x.ten}}</td>
+                    <td>{{x.loai}}</td>
+                    <td>{{x.gia}}</td>
+                    <td style="width: 100px;"><img style="width: 100%;" src="{{x.img}}" alt=""></td>
+                    <td>
+                        <button ng-click="hienThi3($index)" type="button" class="btn btn-success" data-toggle="modal"
+                            data-target="#myModal">
+                            Hiển thị
+                        </button>
+                        <button type="button" class="btn btn-danger" ng-click="xoa3($index)">Xóa</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+
+
+        <!-- The Modal -->
+        <div class="modal" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!--  Thêm ở dưới đây -->
+
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h1 class="modal-title">Thêm sản phẩm</h1>
+                        <button type="button" class="close" data-dismiss="modal" ng-click="dong()">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <form class="container" name="form" ng-submit="onSubmit($event)">
+                            <div style="text-align: center;">
+                            </div>
+                            <input type="text" ng-model="mlb.id" style="display: none;">
+                            <div class="row">
+                                <div class="col-11 col-sm-11 col-md-11 col-lg-11 col-xl-11">
+                                    <div class="form-group">
+                                        <label for="exampleFormControlInput1">Tên sản phẩm</label>
+                                        <input name="txtten" ng-model="mlb.ten" value="mlb.ten" style="width: 100%;"
+                                            type="text" class="form-control" id="exampleFormControlInput1"
+                                            placeholder="Nhập tên sản phẩm" required>
+                                        <small style="color: red; font-style: italic;"
+                                            ng-show="form.txtten.$touched && form.txtten.$invalid">Không được để trống
+                                            tên sản phẩm</small>
+                                    </div>
+                                </div>
+                                <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1" style="margin-top: 33px;">
+                                    <button type="button" class="btn btn-primary">+</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-11 col-sm-11 col-md-11 col-lg-11 col-xl-11">
+                                    <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Phân Loại</label>
+                                        <select class="form-control" ng-model="mlb.loai" id="exampleFormControlSelect1">
+                                            <option value="bigball">MLB BIG BALL</option>
+                                            <option value="boston">MLB BOSTON</option>
+                                            <option value="playball">MLB PLAYBALL</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1" style="margin-top: 33px;">
+                                    <button type="button" class="btn btn-primary">+</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-11 col-sm-11 col-md-11 col-lg-11 col-xl-11">
+                                    <div class="form-group">
+                                        <label for="exampleFormControlInput1">Giá bán</label>
+                                        <input name="txtgia" ng-model="mlb.gia" value="mlb.gia" style="width: 100%;"
+                                            type="number" class="form-control" id="exampleFormControlInput1"
+                                            placeholder="Nhập giá bán" required min="0" max="999999999">
+                                        <small style="color: red; font-style: italic;"
+                                            ng-show="form.txtgia.$touched && form.txtgia.$invalid">Giá phải nằm trong
+                                            khoảng từ 0 - 999999999</small>
+                                    </div>
+                                </div>
+                                <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1" style="margin-top: 33px;">
+                                    <button type="button" class="btn btn-primary">+</button>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-11 col-sm-11 col-md-11 col-lg-11 col-xl-11">
+                                    <div class="form-group">
+                                        <label for="exampleFormControlInput1">Ảnh</label>
+                                        <input name="txtanh" ng-model="mlb.img" value="mlb.img" style="width: 100%;"
+                                            type="text" class="form-control" id="exampleFormControlInput1"
+                                            placeholder="Nhập tên sản phẩm" required>
+                                        <small style="color: red; font-style: italic;"
+                                            ng-show="form.txtanh.$touched && form.txtanh.$invalid">Không được để trống
+                                            tên ảnh</small>
+                                    </div>
+                                </div>
+                                <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1" style="margin-top: 33px;">
+                                    <button type="button" class="btn btn-primary">+</button>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Hoàn tất</button>
+                            <button type="button" class="btn btn-warning" ng-click="dong()">Xóa Trắng</button>
+                        </form>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" ng-click="dong()" data-dismiss="modal">Đóng</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <img width="100%" src="../../img/ft.png" alt="">
+    </div>
+</article>

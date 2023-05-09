@@ -1,0 +1,64 @@
+<article ng-controller="CTsanPhamController">
+  <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="margin-top: 20px;">
+    <div ng-repeat="sp in listMLB_coCao" ng-if="sp.id == idHT">
+      <div class="row">
+        <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+
+          <div id="demo" class="carousel slide" data-ride="carousel">
+
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+              <li data-target="#demo" data-slide-to="0" class="active"></li>
+              <li data-target="#demo" data-slide-to="1"></li>
+              <li data-target="#demo" data-slide-to="2"></li>
+            </ul>
+  
+            <!-- The slideshow -->
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="{{sp.img}}" width="100%" alt="Los Angeles">
+              </div>
+            </div>
+  
+            <!-- Left and right controls -->
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </a>
+  
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-6 col-lg-8 col-xl-8">
+          <h3>
+            {{"Giày "+ sp.ten + "Liner Basic New York Yankees 3ASXCLB3N-50BKS"}}
+          </h3>
+          <h4 style="color: red;"><strong>{{sp.gia + " VNĐ"}}</strong></h4>
+          <del style="color: rgb(83, 81, 81);">32.290.000 ₫</del>
+          <br>
+          Kiểu dáng:
+          Giày thể thao
+          <br>
+          Giới tính:
+          Unisex
+          <br>
+          Màu sắc:
+          Trắng
+          <br>
+          Gọi đặt mua:
+          093.934.8888(7:30 - 22:00)
+          <br>
+          Ưu đãi: <p style="color: red;">Freeship Hà Nội & HCM</p>
+          <button type="button" class="btn btn-danger" ng-click="themVaoGioHang($event)">Thêm vào giỏ hàng</button>
+          <button type="button" class="btn btn-danger">Mua ngay</button>
+          <br> <br>
+          <p>Giày thể thao MLB ChunKy Liner Mid Basic New York Yankees Màu Trắng là mẫu giày unisex dành cho cả
+            nam và nữ đến từ Hàn Quốc đang làm mưa làm gió trên thị trường. Dòng MLB Chunky cổ cao được đánh giá
+            là một điểm sáng nổi bật bởi mang được cả sự tối giản cùng phong cách thời trang trendy chunky
+            sneaker.</p>
+        </div>
+    </div>
+    </div>
+  </div>
+</article>

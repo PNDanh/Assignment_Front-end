@@ -1,0 +1,39 @@
+<div class="container" ng-controller="sanPhamController">
+    <table class="table table-hover" style="border: 3px solid green;">
+        <thead>
+            <tr>
+                <div>
+                    <th>STT</th>
+                    <th>Tên SP</th>
+                    <th>Ảnh</th>
+                    <th>Giá</th>
+                    <th>Số lượng</th>
+                    <th>Tổng tiền</th>
+                </div>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="x in listMLB_coThap">
+                <td>{{$index+1}}</td>
+                <td style="color: red;font-size: large;font-weight: 400;">{{x.ten}}</td>
+                <td style="width: 250px;height: 180px;"><img height="100%" width="100%" src="{{x.img}}" alt=""></td>
+                <td>{{x.gia}}</td>
+                <td>
+                    <div class="quantity">
+                        <div class="pro-qty">
+                            <input ng-model="sl" style="width: 90px;" class="form-control" type="number" min="1"
+                                value="1" />
+                        </div>
+                    </div>
+                </td>
+                <td>{{x.gia * sl}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <div class="row">
+        <h1>Tổng tiền : {{0}}</h1> &nbsp; &nbsp; &nbsp; 
+        <button style="margin-left: 200px;" class="btn btn-danger" ng-click="giao()">Giao hàng</button>
+    </div>
+    <br> <br>
+</div>

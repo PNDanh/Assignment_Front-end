@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../lib-bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="../../css/Login.css">
+</head>
+
+<body>
+    <div class="wrapper fadeInDown">
+        <div id="formContent" ng-controller="dangNhap">
+            <!-- logo -->
+            <div class="fadeIn first">
+                <img src="../../img/logoDN.jpg" id="icon" alt="User Icon"/>
+            </div>
+            <!-- form -->
+            <form name="form_user">
+                <input ng-model="tk" type="text" class="fadeIn second"  placeholder="Tài khoản" required>
+                <input ng-model="mk" type="text" class="fadeIn third"  placeholder="Mật khẩu" required>
+                <br> <br>
+                <input ng-click="dangNhap();" type="submit" class="fadeIn fourth" value="Đăng nhập">
+                <div>
+                    <p>
+                        <a href="DangKy.html" style="text-decoration: none" class="underlineHover">Đăng ký</a>
+                    </p>
+                </div>
+                <div id="formFooter">
+                    <a class="underlineHover" style="text-decoration: none" href="DoiMatKhau.html">Đổi mật khẩu?</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="../../lib/angular.js"></script>
+    <script src="../../controller/login.js"></script>
+</body>
+
+</html>

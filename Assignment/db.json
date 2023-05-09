@@ -1,0 +1,162 @@
+{
+  "gio_hang": [
+    {
+      "id": "1",
+      "ten": "MLB cổ trung 1",
+      "loai": "boston",
+      "gia": 10000000,
+      "img": "../img/m1.jpg"
+    },
+    {
+      "id": "2",
+      "ten": "MLB cổ trung 2",
+      "loai": "boston",
+      "gia": 10000000,
+      "img": "../img/m2.jpg"
+    }
+  ],
+  "danh_muc": [
+    {
+      "id": "1",
+      "ma": "DM1",
+      "ten": "bigball"
+    },
+    {
+      "id": "2",
+      "ma": "DM1",
+      "ten": "playball"
+    },
+    {
+      "id": "3",
+      "ma": "DM1",
+      "ten": "boston"
+    }
+  ],
+  "giay_MLB_co-trung": [
+    {
+      "id": "1",
+      "ten": "MLB cổ trung 1",
+      "loai": "boston",
+      "gia": 10000000,
+      "img": "../img/m1.jpg"
+    },
+    {
+      "id": "2",
+      "ten": "MLB cổ trung 2",
+      "loai": "boston",
+      "gia": 10000000,
+      "img": "../img/m2.jpg"
+    },
+    {
+      "id": "3",
+      "ten": "MLB cổ trung 3",
+      "loai": "boston",
+      "gia": 10000000,
+      "img": "../img/m3.jpg"
+    },
+    {
+      "id": "4",
+      "ten": "MLB cổ trung 4",
+      "loai": "boston",
+      "gia": 10000000,
+      "img": "../img/m4.jpg"
+    }
+  ],
+  "giay_MLB_co-thap": [
+    {
+      "id": "1",
+      "ten": "MLB cổ thấp 1",
+      "loai": "playball",
+      "gia": 10000000,
+      "img": "../img/t1.jpg"
+    },
+    {
+      "id": "2",
+      "ten": "MLB cổ thấp 2",
+      "loai": "playball",
+      "gia": 10000000,
+      "img": "../img/t2.jpg"
+    },
+    {
+      "id": "4",
+      "ten": "MLB cổ thấp 4",
+      "loai": "playball",
+      "gia": 10000000,
+      "img": "../img/t4.jpg"
+    }
+  ],
+  "giay_MLB_co-cao": [
+    {
+      "id": "1",
+      "ten": "MLB cổ cao 1",
+      "loai": "bigball",
+      "gia": 10000000,
+      "img": "../img/c1.jpg"
+    },
+    {
+      "id": "2",
+      "ten": "MLB cổ cao 2",
+      "loai": "bigball",
+      "gia": 11000000,
+      "img": "../img/c2.jpg"
+    },
+    {
+      "id": "3",
+      "ten": "MLB cổ cao 3",
+      "loai": "bigball",
+      "gia": 12000000,
+      "img": "../img/c3.jpg"
+    },
+    {
+      "id": "4",
+      "ten": "MLB cổ cao 4",
+      "loai": "bigball",
+      "gia": 13000000,
+      "img": "../img/c4.jpg"
+    }
+  ],
+  "tai_khoan": [
+    {
+      "id": "id000",
+      "tk": "admin",
+      "sdt": "0848298155",
+      "mk": "admin",
+      "email": "danhpnph26382"
+    },
+    {
+      "id": "id003",
+      "tk": "tk3",
+      "sdt": "0848298155",
+      "mk": "333",
+      "email": "danhpnph26382"
+    },
+    {
+      "id": "id002",
+      "tk": "tk2",
+      "sdt": "0848298155",
+      "mk": "222",
+      "email": "danhpnph26382"
+    },
+    {
+      "id": "id004",
+      "tk": "tk4",
+      "email": "danhpnph26382",
+      "sdt": "0848298155",
+      "mk": "444"
+    },
+    {
+      "tk": "tk5",
+      "email": "pdanh2003@gmail.com",
+      "sdt": "0848298155",
+      "mk": "555",
+      "id": "qsmQyXk"
+    },
+    {
+      "id": "XnKSpSi",
+      "tk": "tk6",
+      "email": "buithuy.hc@gmail.com",
+      "sdt": "0848298155",
+      "mk": "666"
+    }
+  ]
+}

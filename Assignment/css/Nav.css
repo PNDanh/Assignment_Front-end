@@ -1,0 +1,16 @@
+.cart{
+    margin-left: 80px;
+}
+@media screen and (max-width:900px){
+    .cart{
+        margin-left: 15px;
+    }
+    .search{
+        display: none;
+    }
+}
+body {
+    font-family: "Poppins", sans-serif;
+    height: 100vh;
+    overflow-x: hidden;
+  }

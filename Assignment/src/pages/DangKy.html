@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../lib-bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="../../css/Login.css">
+</head>
+
+<body ng-app="myApp">
+    <div class="wrapper fadeInDown" ng-controller="dangNhap">
+        <div id="formContent">
+            <!-- Icon -->
+            <div class="fadeIn first">
+                <img src="../../img/logoDN.jpg" id="icon" alt="User Icon" />
+            </div>
+
+            <!-- Login Form -->
+            <form ng-submit="onSubmit($event)" method="post">
+                <input type="text" ng-model="tkDangKi.id" style="display: none;">
+                <input type="text" ng-model="tkDangKi.tk" class="fadeIn second" placeholder="Tài khoản">
+                <input type="text" ng-model="tkDangKi.email" class="fadeIn second" placeholder="Email">
+                <input type="text" ng-model="tkDangKi.sdt" class="fadeIn second" placeholder="Số điện thoại">
+                <input type="text" ng-model="tkDangKi.mk" class="fadeIn third" placeholder="Mật khẩu">
+                <br> <br>
+                <input type="submit" class="fadeIn fourth" value="Đăng ký">
+                <div>
+                    <p>
+                        <a href="DangNhap.html" style="text-decoration: none">Trở lại Đăng Nhập</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="../../lib/angular.js"></script>
+    <script src="../../controller/login.js"></script>
+</body>
+
+</html>
